@@ -7,16 +7,17 @@ Created on Tue Dec 10 12:55:30 2019
 """
 
 
-def line_skip(fle):
+def line_skip(data):
     lines = []
-    with open(fle, 'r') as f:
+    with open(data, 'r') as f:
         for count, line in enumerate(f, start=1):
             if count % 2 == 0:
+                line = line.strip()
                 lines.append(line)
         return lines
             
 
-fle = 'rosalind_ini5.txt'
-strng = line_skip(fle)  
-strng = '\n'.join(map(str, strng)) 
-print(strng) 
+#data = 'rosalind_rna.txt'
+#strng = line_skip(data)  
+#strng = '\n'.join(map(str, strng)) 
+#print(strng) 
