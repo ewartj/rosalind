@@ -30,7 +30,7 @@ def RNA(DNA, standard):
             for key, value in complimnet.items():
                 if item==key:
                     string[index]=value
-        return ''.join(string)
+        return ''.join(string[::-1])
     else:
         print('please specify standard')
 
